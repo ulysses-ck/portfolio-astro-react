@@ -1,5 +1,6 @@
 ---
-
+import Header from "../components/astro/Header.astro";
+import Hero from "../components/astro/Hero.astro";
 ---
 
 <html lang="en">
@@ -11,7 +12,15 @@
     <title>Astro</title>
   </head>
 
-  <body>
-    <h1>Astro</h1>
+  <body class="body">
+    <Header />
+    <Hero />
   </body>
 </html>
+<style>
+  .body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
