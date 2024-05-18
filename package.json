@@ -7,11 +7,22 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --ignore-path .gitignore --write ./src/**/*.{astro,mdx,js,jsx,ts,tsx,json,css,scss,html}"
   },
   "dependencies": {
-    "astro": "^4.5.12",
     "@astrojs/check": "^0.5.10",
-    "typescript": "^5.4.3"
+    "@astrojs/react": "^3.1.1",
+    "@types/react": "^18.2.74",
+    "@types/react-dom": "^18.2.24",
+    "astro": "^4.5.12",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.2.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0",
+    "typescript": "^5.4.4"
   }
 }

@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import imageJimmyFermin from "../../assets/jimmy-fermin-bqe0J0b26RQ-unsplash.jpg";
+import ImageContainer from "./ImageContainer.astro";
+---
+
+<section class="hero">
+  <h1>Hi 👋, My name is Pavan MG I build things for web</h1>
+  <ImageContainer sizeWidth={"350px"}>
+    <Image src={imageJimmyFermin} alt="Jimmy Fermin" />
+  </ImageContainer>
+</section>
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  @media (min-width: 1600px) {
+    .hero {
+      flex-direction: row;
+    }
+  }
+</style>

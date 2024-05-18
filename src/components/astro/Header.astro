@@ -1,0 +1,95 @@
+---
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaTwitter } from "react-icons/fa6";
+
+// define links for Home, About, Tech Stack, Projects, Contact
+const links = [
+  {
+    label: "Home",
+    id: "home",
+  },
+  {
+    label: "About",
+    id: "about",
+  },
+  {
+    label: "Tech Stack",
+    id: "tech-stack",
+  },
+  {
+    label: "Projects",
+    id: "projects",
+  },
+  {
+    label: "Contact",
+    id: "contact",
+  },
+];
+---
+
+<header class="header-component">
+  <h2>
+    {"{007}"}
+    {"pavanmg"}
+  </h2>
+
+  <nav class="nav">
+    <ul>
+      {
+        links.map((link) => {
+          const { id, label } = link;
+          return (
+            <li>
+              <a href={`#${id}`}>{label}</a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </nav>
+  <ul class="social">
+    <li>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <FaGithub size={32} color="666666" />
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <FaTwitter size={32} color="666666" />
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_blank" rel="noopener noreferrer">
+        <FaLinkedin size={32} color="666666" />
+      </a>
+    </li>
+  </ul>
+</header>
+<style>
+  .header-component {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav > ul > li {
+    display: flex;
+    list-style: none;
+  }
+  .nav > ul {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  .social > li {
+    display: flex;
+    list-style: none;
+  }
+
+  .social {
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+  }
+</style>
