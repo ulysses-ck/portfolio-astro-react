@@ -2,14 +2,15 @@
 interface Props {
   sizeWidth: string | number;
   height?: string;
+  classCustom?: string;
 }
 const { sizeWidth, height = "auto" } = Astro.props;
 ---
 
-<div class="">
+<div class="imageContainer">
   <slot />
 </div>
-<style define:vars={{ sizeWidth, height }}>
+<style is:global define:vars={{ sizeWidth, height }}>
   .imageContainer {
     width: var(--sizeWidth);
     height: var(--height);
